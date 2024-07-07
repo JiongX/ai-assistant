@@ -40,3 +40,10 @@ select * from chat_message where user_id = (select user_id from sys_user where u
 """,(username,))
     con.commit()
     return cursor.fetchall()
+
+def add_userchat(userid,role,msg):
+    cursor = con.cursor()
+    cursor.execute("""INSERT INTO chat_message (user_id, role, message) VALUES (%s,%s, %s)""",(
+        userid, role, msg
+    ))
+    con.commit()
