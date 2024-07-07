@@ -6,7 +6,7 @@ import streamlit as st
 from dao.UserDao import query_user_exist, add_user
 from util.style_util import main_bg
 
-main_bg("img.png")
+main_bg("img_2.png")
 st.title("注册")
 
 usr = st.text_input("输入账号")
