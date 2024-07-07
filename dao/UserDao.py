@@ -1,9 +1,9 @@
 import pymysql
 
 con = pymysql.connect(
-    host='localhost',
-    user='root',
-    password='root',
+    host='rm-2zeo25h474310yk6tjo.mysql.rds.aliyuncs.com',
+    user='RoOt',
+    password='_root235476',
     db='assistant',
     charset='utf8',
     port=3306,
