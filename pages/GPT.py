@@ -8,6 +8,7 @@ from util.style_util import main_bg
 
 main_bg("pages/img_4.png")
 
+#从缓存取出信息
 username = st.session_state.username
 uid = st.session_state.uid
 st.title("GPT ASSISTANT FOR AI")
@@ -22,7 +23,7 @@ def st_write(txt:str):
 
 
 
-
+#向数据库插入聊天信息
 message = st.chat_input("please input your question mother fucker.")
 if message:
     add_userchat(uid,"user",message)
@@ -44,7 +45,7 @@ if message:
 
 
 
-
+#将数据库的聊天内容输出到聊天界面
 chats = query_userchat_by_username(username)
 if len(chats) != 0:
     for chat in chats:

@@ -6,9 +6,10 @@ import streamlit as st
 from dao.UserDao import query_user_exist, add_user
 from util.style_util import main_bg
 
-main_bg("img.png")
+main_bg("pages/img_2.png")
 st.title("注册")
 
+#注册输入框
 usr = st.text_input("输入账号")
 pwd = st.text_input("输入密码")
 pwd2 = st.text_input("请再次输入密码")
@@ -17,6 +18,7 @@ login_flag = st.button("已有账号？点击登录")
 
 
 def register(usr, pwd, pwd2):
+    #数据过滤
     if usr and pwd and pwd2:
         if pwd != pwd2:
             st.error("密码和重复密码不一致");return
@@ -35,8 +37,10 @@ def register(usr, pwd, pwd2):
     else:
         st.error("用户名或者密码和重复密码为空")
 
+#点击登录切换页面
 if login_flag:
     st.switch_page("login.py")
 
+#点击去尝试注册
 if reg_flag:
     register(usr, pwd, pwd2)

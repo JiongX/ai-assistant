@@ -47,3 +47,8 @@ def add_userchat(userid,role,msg):
         userid, role, msg
     ))
     con.commit()
+
+def update_user(usr,pwd):
+    cursor = con.cursor()
+    cursor.execute("update sys_user set password = %s where username = %s",(pwd, usr))
+    con.commit()

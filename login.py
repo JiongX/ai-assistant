@@ -13,15 +13,21 @@ st.set_page_config(
 main_bg("pages/img_2.png")
 st.title("登录")
 
+#输入用户数据
 usr = st.text_input("请输入用户名")
 pwd = st.text_input("请输入密码",type="password")
 loginFlag = st.button("登录")
 registerFlag = st.button("注册")
+repwdFlag = st.button("修改密码")
 
-
+#点击注册按钮转到注册页面
 if registerFlag:
     st.switch_page("./pages/register.py")
 
+if repwdFlag:
+    st.switch_page("./pages/repwd.py")
+
+#点击登录尝试登录
 if loginFlag:
     #if st.session_state.username:
     #    st.switch_page("./pages/GPT.py")
