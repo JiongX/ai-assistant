@@ -7,7 +7,7 @@ from util.style_util import main_bg
 
 
 st.set_page_config(
-    page_title="ABCDEFG",
+    page_title="人工智能小助手",
     page_icon="😀"
 )
 main_bg("pages/img_2.png")

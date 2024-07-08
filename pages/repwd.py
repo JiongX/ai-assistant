@@ -8,7 +8,7 @@ from dao.UserDao import query_user_exist, add_user, update_user
 from util.style_util import main_bg
 
 main_bg("pages/img_2.png")
-st.title("注册")
+st.title("修改密码")
 
 #注册输入框
 
